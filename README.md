@@ -1,8 +1,6 @@
 # riya-web-sandbox
 
 ## What I've Learned
-
-### June 1st
 - Watched a YouTube vidoe by Mosh that gave a basic rundown of HTML
   - How to debug using Google developer tools (inspect)
   - How to validate a HTML file and CSS file using an online validator
@@ -12,9 +10,6 @@
   - Desgined a basic wireframe in Figma
   - Used W3Schools to learn more about HTML forms and dropdown menus
   - Also used W3Schools to figure out CSS and design elemenets
-### June 2nd
-- Continued to modify and edit inquiry.html
-
 ## The tools I've Used
 - [24 Minute Figma Tutorial](https://www.youtube.com/watch?v=FTFaQWZBqQ8)
 - [HTML with Mosh](https://www.youtube.com/watch?v=qz0aGYrrlhU)
