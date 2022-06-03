@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inquiry Form</title>
+    <style>
+      h1 {
+        background-color: rgba(229, 136, 136);
+        width: 1000px;
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: 64px;
+      }
+      input[type="submit"] {
+        background-color: rgb(184, 233, 146);
+        border-radius: 15px;
+        padding: 15px;
+        width: 150px;
+        text-align: center;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: 32px;
+      }
+      input[type="text"],
+      select {
+        width: 350px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #d9d9d9;
+      }
+      form {
+        margin-left: 206px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: 32px;
+      }
+      select {
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Summer Camp 2022</h1>
+    <br /><br />
+    <form>
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+
+      <label for="phone">Phone</label><br />
+      <input type="text" id="phone" name="phone" /><br />
+      <label for="email">Email</label><br />
+      <input type="text" id="email" name="email" /><br />
+      <label for="dob">Date Of Birth</label><br />
+      <!-- This can't be a text field, needs to be date-->
+
+      <input type="text" id="dob" name="dob" /><br />
+    </form>
+    <form action="/action_page.php">
+      <label for="how">How did you hear about us?</label><br />
+      <select name="how" id="how">
+        <option value="news">Newspaper</option>
+        <option value="fb">Facebook</option>
+        <option value="twi">Twitter</option>
+        <option value="gram">Instagram</option>
+        <option value="forf">Family or Friends</option>
+      </select>
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
