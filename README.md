@@ -14,3 +14,11 @@
   - Also used W3Schools to figure out CSS and design elemenets
 ### June 2nd
 - Continued to modify and edit inquiry.html
+
+## The tools I've Used
+- [24 Minute Figma Tutorial](https://www.youtube.com/watch?v=FTFaQWZBqQ8)
+- [HTML with Mosh](https://www.youtube.com/watch?v=qz0aGYrrlhU)
+- Visual Studio Code
+  - LiveServer Extension
+- Figma
+- [W3Schools](https://www.w3schools.com/css/default.asp)
