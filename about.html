@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background-color: #ddddcd;
+      }
+      .logo {
+        font-size: 50px;
+        text-decoration: none;
+      }
+      li,
+      a {
+        font-family: Avneir, sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: black;
+        text-decoration: underline;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 10%;
+      }
+      .nav_links {
+        list-style: none;
+      }
+      .nav_links li {
+        display: inline-block;
+        padding: 0px 40px;
+      }
+      .wrapper {
+        margin-left: 70px;
+        display: flex;
+        flex-direction: row;
+      }
+      .left {
+        flex: 50%;
+        padding: 50px;
+      }
+      .right {
+        flex: 50%;
+        padding: 50px;
+      }
+      img {
+        object-fit: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+      }
+      h2 {
+        font-size: 40px;
+        font-family: Avenir;
+        font-display: bold;
+      }
+      .aboutme {
+        font-size: 30px;
+        font-family: Avenir;
+        height: 100px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Riya Cherlakola</a>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="inquiry.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <section class="left">
+        <img src="images/IMG_8667-min.jpg" alt="" />
+      </section>
+      <section class="right">
+        <h2>Who Am I?</h2>
+        <p class="aboutme">
+          I am a student at UIUC 🧡💙. <br />
+          I study CS and Lingusitcs. <br />
+          In my free time I love to watch movies, read books and play tennis.
+          Catch me coding in the library with a cup of tea 🫖.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
