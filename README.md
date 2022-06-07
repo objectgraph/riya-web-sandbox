@@ -60,3 +60,11 @@ In order to merge the branches with the main branch, a pull request is created.
 It will tell others about the changes you made, and once reviewed can be merged with the main branch
 
 Branches and pull requests are an extremely valuable tool used my many developers and teams to effectively work with code
+
+#### Branches with Git and VScode
+
+- To create a branch in the terminal use the command 1`git checkout -b name-of-branch`
+  - Dont' use uppercase or spaces, instead use kebab case
+- To switch to a branch use the command `git checkout name-of-branch`
+- Finally to merge the changes to your computer use the command `git pull`
+  - This will pull all the changes from the merge to your VSCode
