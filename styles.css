@@ -133,14 +133,17 @@
     }
     .footer {
         font-size: 14px;
-        height: 30px;
-        margin-top: -30px;
-      word-spacing: 2px;
-      font-family: Avenir;
-      text-align: center;
+    
     }
+    .content {
+        flex: 1 0 auto;
+      }
     .wrapper {
         display: block;
+    }
+    .left {
+        margin-left: 0;
+        padding: 0%;
     }
     .about-me-image {
         object-fit: cover;
