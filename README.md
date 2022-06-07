@@ -47,3 +47,16 @@ Git is a powerful version control system used by programmers to keep track/recor
 - Under the changes pane click the + icon to add all the changes
 - Once that is done, click the checkmark icon to commit the changes and add a message in the box
 - Finally click sync which will push all the changes to the github repo
+
+### Branches and Pull Requests
+
+Branches are used to work on current code without affecting the main/other branches in the repo
+Reasons why branches are created:
+
+- To develop new features
+- To fix bugs
+
+In order to merge the branches with the main branch, a pull request is created.
+It will tell others about the changes you made, and once reviewed can be merged with the main branch
+
+Branches and pull requests are an extremely valuable tool used my many developers and teams to effectively work with code
