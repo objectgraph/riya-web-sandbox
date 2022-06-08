@@ -64,22 +64,25 @@
         font-weight: 100;
         font-size: 20px;
       }
+      .validation-error {
+        color: red;
+        font-size: 14px;
+        visibility: hidden;
+      }      
     </style>
   </head>
   <body>
     <h1>Summer Camp 2022</h1>
     <br /><br />
-    <form>
+    <form onsubmit="sendInquiry(); return false;">
       <label for="fname">Your Name</label><br />
-      <input type="text" id="fname" name="fname" /><br />
-
+      <input type="text" id="fname" name="fname" /> <span id="fname-error" class="validation-error">Please fill in first name</span><br />
       <label for="phone">Phone</label><br />
       <input type="text" id="phone" name="phone" /><br />
       <label for="email">Email</label><br />
       <input type="text" id="email" name="email" /><br />
       <label for="dob">Date Of Birth</label><br />
       <input type="date" id="dob" name="dob" /><br />
-      <form action="/action_page.php">
         <label for="how">How did you hear about us?</label><br />
         <select name="how" id="how">
           <option value="news">Newspaper</option>
@@ -91,7 +94,17 @@
         <br />
         <br /><br />
         <input type="submit" value="Submit" />
-      </form>
     </form>
+
+
+    <script>
+      function sendInquiry() {
+        const fnameElem = document.getElementById('fname');
+        const fnameError = document.getElementById('fname-error');
+        if (!fnameElem.value){
+          fnameError.style.visibility = "visible";
+        }
+      }
+    </script>
   </body>
 </html>
