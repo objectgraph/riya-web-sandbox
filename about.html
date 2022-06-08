@@ -33,6 +33,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="inquiry.html">Demo Project</a></li>
+            <li><button class="btn-toggle">🌙</button></li>
           </ul>
         </nav>
       </header>
@@ -59,4 +60,13 @@
       copyright &copy; RiyaCherlakola 2022. Created with ❤️ + 😭
     </footer>
   </body>
+  <script>
+    const btn = document.querySelector(".btn-toggle");
+
+    // Listen for a click on the button
+    btn.addEventListener("click", function () {
+      // Then toggle (add/remove) the .dark-theme class to the body
+      document.body.classList.toggle("dark-theme");
+    });
+  </script>
 </html>
