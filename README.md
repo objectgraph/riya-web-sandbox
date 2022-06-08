@@ -11,6 +11,10 @@
   - Desgined a basic wireframe in Figma
   - Used W3Schools to learn more about HTML forms and dropdown menus
   - Also used W3Schools to figure out CSS and design elemenets
+- Created my own website a uploaded it to github pages
+  - Used HTML and CSS to design and style it
+  - Used `@ media querys` to make the design responsive for mobile
+- Implemented JavaScript to add some reactive elements to the demo inquiry form
 
 ## The tools I've Used
 
