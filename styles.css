@@ -19,7 +19,6 @@
     border: none;
     border-radius: 50%;
     color: white;
-    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -49,7 +48,7 @@
   }
   .nav_links li {
     display: inline-block;
-    padding: 0px 40px;
+    padding: 0px 20px;
   }
   /* About Me Column */
   .wrapper {
