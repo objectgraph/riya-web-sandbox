@@ -92,21 +92,6 @@
       height: 100%;
       margin: 0;
     }
-    /* .content {
-      min-height: 100%;
-    }
-    .content-inside {
-      padding: 20px;
-      padding-bottom: 30px;
-    }
-    .footer {
-      height: 30px;
-      margin-top: -30px;
-      font-size: 18px;
-    word-spacing: 2px;
-    font-family: Avenir;
-    text-align: center;
-    } */
     body {
         display: flex;
         flex-direction: column;

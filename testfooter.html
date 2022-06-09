@@ -86,57 +86,82 @@
       font-family: Avenir;
       width: 400px;
     }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    #toggle-btn {
+      padding: 0.5em;
+      font-weight: 800;
+    }
+
+    #toggle-btn:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .dark-mode-toggle {
+      background: #000;
+      color: #fff;
+    }
+
+    #theme {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .dark-mode-theme {
+      background: #000;
+      color: #fff;
+    }
   </style>
   <body>
-    <div class="content">
-      <header>
-        <a href="index.html" class="logo">Riya Cherlakola</a>
-        <nav>
-          <ul class="nav_links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="inquiry.html">Demo Project</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="wrapper">
-        <section class="left">
-          <img src="images/IMG_8667-min.jpg" class="about-me-image" alt="" />
-        </section>
-        <section class="right">
-          <h2>Who Am I?</h2>
-          <p class="aboutme-text">
-            I am a student at UIUC 🧡💙. <br />
-            I study CS and Linguistics. <br />
-            In my free time I love to watch movies 🍿, read books&nbsp;📚, and
-            play tennis 🎾. Catch me coding in the library with a cup of tea 🫖.
-            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            quo, fuga cumque fugiat ut unde dignissimos corporis vero expedita
-            dolore rem, facilis adipisci atque possimus nesciunt soluta quam
-            laborum distinctio similique incidunt quos doloremque dicta officia
-            beatae. Neque et eos facilis. Natus corporis magnam rem explicabo
-            adipisci architecto commodi, quos vero modi fugit veritatis esse aut
-            sit placeat autem ratione voluptatibus voluptate ex minus
-            voluptatem? Facere officia eveniet aliquid harum voluptates
-            consectetur a quaerat, magnam, perferendis ad autem sequi. Iure
-            necessitatibus nemo consequuntur possimus voluptatum, minus
-            accusamus, beatae, enim eos error ipsum odit vel ab obcaecati autem
-            maiores dolore sed repellendus mollitia cupiditate et? Iure neque
-            fugit sed debitis placeat fugiat, harum inventore dolorum omnis at
-            ut a ullam eum ipsa? Explicabo adipisci blanditiis cum minus
-            incidunt atque itaque eaque unde sunt, sapiente id. Officiis beatae
-            in cupiditate quis magni ex adipisci libero dicta! Animi deleniti
-            optio error ea, harum voluptatibus, neque commodi aliquid iste
-            quisquam molestiae delectus amet alias dolores, placeat eveniet
-            nesciunt! Illo excepturi sint quae eos vitae libero ducimus,
-            repudiandae facilis maxime ab maiores cum laudantium a recusandae
-            eius autem, aperiam voluptatum! Ex quibusdam animi alias delectus
-            libero eos provident, porro similique, corrupti maiores voluptatem
-            ipsa eum? -->
-          </p>
-        </section>
-      </div>
+    <div id="theme">
+      <button id="toggle-btn" class="dark-mode-toggle">Toggle dark mode</button>
+      <a href="testdarkmode.html" class="logo">Riya Cherlakola</a>
+      <h1>Theme!</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+        mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+        voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+        fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
+        accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
+        molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
+        officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
+        nesciunt ipsum debitis quas aliquid. Reprehenderit, quia.
+      </p>
     </div>
     <footer class="footer">HELLO</footer>
+    <script>
+      const toggleBtn = document.getElementById("toggle-btn");
+      const theme = document.getElementById("theme");
+      let darkMode = localStorage.getItem("dark-mode");
+
+      const enableDarkMode = () => {
+        theme.classList.add("dark-mode-theme");
+        toggleBtn.classList.remove("dark-mode-toggle");
+        localStorage.setItem("dark-mode", "enabled");
+      };
+
+      const disableDarkMode = () => {
+        theme.classList.remove("dark-mode-theme");
+        toggleBtn.classList.add("dark-mode-toggle");
+        localStorage.setItem("dark-mode", "disabled");
+      };
+
+      if (darkMode === "enabled") {
+        enableDarkMode(); // set state of darkMode on page load
+      }
+
+      toggleBtn.addEventListener("click", (e) => {
+        darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+        if (darkMode === "disabled") {
+          enableDarkMode();
+        } else {
+          disableDarkMode();
+        }
+      });
+    </script>
   </body>
 </html>
