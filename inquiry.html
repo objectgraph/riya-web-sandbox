@@ -81,14 +81,24 @@
         >Please fill in your name</span
       ><br />
       <label for="phone">Phone</label><br />
-      <input type="text" id="phone" name="phone" placeholder="Digits only (e.g. 123-45-678)"/>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Digits only (e.g. 1234567890)"
+      />
       <span id="phone-error" class="validation-error"
-        >Please fill in valid phone</span
+        >Please fill in a valid phone number</span
       ><br />
       <label for="email">Email</label><br />
-      <input type="text" id="email" name="email" />
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="(e.g. johndoe@gmail.com)"
+      />
       <span id="email-error" class="validation-error"
-        >Please fill in valid email (e.g johndoe@gmail.com) </span
+        >Please fill in valid email</span
       ><br />
       <label for="dob">Date Of Birth</label><br />
       <input type="date" id="dob" name="dob" />
@@ -134,11 +144,10 @@
         } else {
           emailError.style.visibility = "hidden";
         }
-        /*Idk how to get this to work */
+        /*Allows only dates from the past*/
         const dobElem = document.getElementById("dob");
         const dobError = document.getElementById("dob-error");
-        //var validDOB = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if (!dobElem.value) {
+        if (!dobElem.value || dobElem.valueAsDate > new Date()) {
           dobError.style.visibility = "visible";
         } else {
           dobError.style.visibility = "hidden";
