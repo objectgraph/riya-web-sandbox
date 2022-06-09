@@ -72,3 +72,11 @@ Branches and pull requests are an extremely valuable tool used my many developer
 - To switch to a branch use the command `git checkout name-of-branch`
 - Finally to merge the changes to your computer use the command `git pull`
   - This will pull all the changes from the merge to your VSCode
+
+#### Git Stash
+
+When you are working on a branch and don't want to commit your changes until you've merged to another branch, you can use something called `git stash`
+
+- This command will enable you to "stash" away your changes until you are merged with onto another branch.
+- Once you merge using `git checkout branch-name` and `git pull` you can use the command `git status` to see that you are working on a clean directory
+- Once you see that, you can apply the command `git stash apply` to bring your changes to the current branch.
