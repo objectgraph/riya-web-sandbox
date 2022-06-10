@@ -32,27 +32,68 @@
         width: 100vw;
         height: 100vh;
       }
+      /* footer.theme {
+        background-color: #000;
+        color: #fff;
+      } */
 
       .dark-mode-theme {
         background: #000;
         color: #fff;
       }
+      /* Footer */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        flex: 1 0 auto;
+      }
+      footer {
+        flex-shrink: 0;
+        font-size: 18px;
+        word-spacing: 2px;
+        font-family: Avenir;
+        text-align: center;
+        background-color: transparent;
+      }
     </style>
     <div id="theme">
-      <button id="toggle-btn" class="dark-mode-toggle">Toggle dark mode</button>
-      <h1>Theme!</h1>
-      <li><a href="testfooter.html">Home</a></li>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-        mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-        voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-        fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-        accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
-        molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
-        officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
-        nesciunt ipsum debitis quas aliquid. Reprehenderit, quia.
-      </p>
+      <div class="content">
+        <button id="toggle-btn" class="dark-mode-toggle">
+          Toggle dark mode
+        </button>
+        <header>
+          <a href="index.html" class="logo">Riya Cherlakola</a>
+          <nav>
+            <ul class="nav_links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="inquiry.html">Demo Project</a></li>
+              <li><button class="btn-toggle">🌙</button></li>
+            </ul>
+          </nav>
+        </header>
+        <section class="home-right">
+          <h2>Hello 👋, I'm Riya.</h2>
+          <p class="home-text">
+            Welcome to my website. You can check out some of my projects,
+            articles, or learn more about who I am.
+          </p>
+        </section>
+      </div>
     </div>
+    <div class="theme">
+      <footer class="theme">
+        copyright &copy; RiyaCherlakola 2022. Created with ❤️ + 😭
+      </footer>
+    </div>
+
     <script src="src/index.js"></script>
     <script>
       const toggleBtn = document.getElementById("toggle-btn");
@@ -61,6 +102,7 @@
 
       const enableDarkMode = () => {
         theme.classList.add("dark-mode-theme");
+        //theme.classList.add("dark");
         toggleBtn.classList.remove("dark-mode-toggle");
         localStorage.setItem("dark-mode", "enabled");
       };
