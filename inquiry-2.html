@@ -10,8 +10,97 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <section id="inquiry">
+      <div class="container-lg my-10">
+        <div class="text-center">
+          <h2>A Better Inquiry Form!</h2>
+          <p class="lead">A updated inquiry form with bootstrap</p>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            <form>
+              <label for="name" class="form-label">Name</label>
+              <div class="mb-4 input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-person-fill"></i>
+                  </span>
+                <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="John Doe"
+              />
+              </div>
+              
+              <label for="email" class="form-label">Email</label>
+              <div class="mb-4 input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-envelope-fill"></i>
+                  </span>
+                  <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="johndoe@email.com"
+                />
+              </div>
+             
+
+              <label for="phone" class="form-label">Phone</label>
+              <div class="mb-4 input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-telephone-fill"></i>
+                  </span>
+                  <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="123-456-7890"
+              />
+              </div>
+              
+
+              <label for="dob" class="form-label">Date of Birth</label>
+              <div class="mb-4 input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-calendar-fill"></i>
+                  </span>
+                  <input
+                type="date"
+                class="form-control"
+                id="dob"
+              />
+              </div>
+              
+
+              <label for="how" class="form-label"
+                >How did you hear about us?</label
+              >
+              <div class="mb-4 input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-megaphone-fill"></i>
+                  </span>
+                  <select id="how" class="form-select">
+                    <option value="news">Newspaper</option>
+                    <option value="fb">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="insta">Instagram</option>
+                    <option value="forf">Family or Friends</option>
+                  </select>
+              </div>
+              
+
+              <label for="query" class="form-label">Any Questions?</label>
+              <textarea id="query" class="form-control" style="height: 140px"></textarea>
+              <div class="mt-4 text-center">
+                  <button type="submit" class="btn btn-secondary">Submit</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
