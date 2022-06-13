@@ -9,61 +9,39 @@
   <body>
     <style>
       body {
-        font-family: sans-serif;
-        margin: 0;
+        --text-color: #222;
+        --bkg-color: #fff;
+      }
+      body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
       }
 
-      #toggle-btn {
-        padding: 0.5em;
-        font-weight: 800;
+      * {
+        font-family: Arial, Helvetica, sans-serif;
       }
 
-      #toggle-btn:hover {
-        cursor: pointer;
-        opacity: 0.8;
-      }
-
-      .dark-mode-toggle {
-        background: #000;
-        color: #fff;
-      }
-
-      #theme {
-        width: 100vw;
-        height: 100vh;
-      }
-      /* footer.theme {
-        background-color: #000;
-        color: #fff;
-      } */
-
-      .dark-mode-theme {
-        background: #000;
-        color: #fff;
-      }
-      /* Footer */
-      html,
       body {
-        height: 100%;
-        margin: 0;
+        background: var(--bkg-color);
       }
-      body {
-        display: flex;
-        flex-direction: column;
+
+      h1,
+      p {
+        color: var(--text-color);
       }
-      .content {
-        flex: 1 0 auto;
-      }
-      footer {
-        flex-shrink: 0;
-        font-size: 18px;
-        word-spacing: 2px;
-        font-family: Avenir;
-        text-align: center;
-        background-color: transparent;
-      }
+
+      /* body {
+              background-color: #f5f5f5;
+            }
+            body.dark-theme {
+              color: #f5f5f5;
+              background: #121212;
+            }
+            body.dark-theme a {
+              color: #f5f5f5;
+            } */
     </style>
-    <div id="theme">
+    <!-- <div id="theme">
       <div class="content">
         <button id="toggle-btn" class="dark-mode-toggle">
           Toggle dark mode
@@ -92,38 +70,61 @@
       <footer class="theme">
         copyright &copy; RiyaCherlakola 2022. Created with ❤️ + 😭
       </footer>
+    </div> -->
+    <div class="content">
+      <button class="btn-toggle">Toggle Dark-Mode</button>
+      <header>
+        <a href="index.html" class="logo">Riya Cherlakola</a>
+        <nav>
+          <ul class="nav_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="inquiry-2.html">Demo Project</a></li>
+            <li><button class="btn-toggle">🌑</button></li>
+            <li></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="wrapper">
+        <section class="left">
+          <img
+            src="images/IMG_8667-min.jpg"
+            class="about-me-image"
+            alt="Riya Profile Picture"
+          />
+        </section>
+        <section class="right">
+          <h2>Who Am I?</h2>
+          <p class="aboutme-text">
+            I am a student at UIUC 🧡💙. <br />
+            I study CS and Linguistics. <br />
+            In my free time I love to watch movies 🍿, read books&nbsp;📚, and
+            play tennis 🎾. Catch me coding in the library with a cup of tea 🫖.
+          </p>
+        </section>
+      </div>
     </div>
+    <footer class="footer">
+      copyright &copy; RiyaCherlakola 2022. Created with ❤️ + 😭
+    </footer>
 
-    <script src="src/index.js"></script>
     <script>
-      const toggleBtn = document.getElementById("toggle-btn");
-      const theme = document.getElementById("theme");
-      let darkMode = localStorage.getItem("dark-mode");
+      const btn = document.querySelector(".btn-toggle");
 
-      const enableDarkMode = () => {
-        theme.classList.add("dark-mode-theme");
-        //theme.classList.add("dark");
-        toggleBtn.classList.remove("dark-mode-toggle");
-        localStorage.setItem("dark-mode", "enabled");
-      };
-
-      const disableDarkMode = () => {
-        theme.classList.remove("dark-mode-theme");
-        toggleBtn.classList.add("dark-mode-toggle");
-        localStorage.setItem("dark-mode", "disabled");
-      };
-
-      if (darkMode === "enabled") {
-        enableDarkMode(); // set state of darkMode on page load
+      const currentTheme = localStorage.getItem("theme");
+      if (currentTheme == "dark") {
+        document.body.classList.add("dark-theme");
       }
 
-      toggleBtn.addEventListener("click", (e) => {
-        darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
-        if (darkMode === "disabled") {
-          enableDarkMode();
-        } else {
-          disableDarkMode();
+      btn.addEventListener("click", function () {
+        document.body.classList.toggle("dark-theme");
+        btn.textContent = "☀️";
+
+        let theme = "light";
+        if (document.body.classList.contains("dark-theme")) {
+          theme = "dark";
         }
+        localStorage.setItem("theme", theme);
       });
     </script>
   </body>
