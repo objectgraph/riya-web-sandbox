@@ -11,19 +11,34 @@
   - Desgined a basic wireframe in Figma
   - Used W3Schools to learn more about HTML forms and dropdown menus
   - Also used W3Schools to figure out CSS and design elemenets
-- Created my own website a uploaded it to github pages
+- Created my own website and uploaded it to github pages
   - Used HTML and CSS to design and style it
   - Used `@ media querys` to make the design responsive for mobile
 - Implemented JavaScript to add some reactive elements to the demo inquiry form
+- Created a dark mode using localStorage so the preference is kept when refreshed or when the page is changed
+- Created a new inquiry form with Bootstrap 5
+  - Added validation
+-
 
-## The tools I've Used
+## What I've Used
 
+### Tools
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+  - LiveServer Extension
+  - GitLens Extension
+  - Prettier Extension
+- [Figma](https://www.figma.com/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [Java Script Fiddle](https://jsfiddle.net/)
+
+### Tutorials
+
+- [W3Schools](https://www.w3schools.com/css/default.asp)
 - [24 Minute Figma Tutorial](https://www.youtube.com/watch?v=FTFaQWZBqQ8)
 - [HTML with Mosh](https://www.youtube.com/watch?v=qz0aGYrrlhU)
-- Visual Studio Code
-  - LiveServer Extension
-- Figma
-- [W3Schools](https://www.w3schools.com/css/default.asp)
+- [Dark Mode Guide](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#toggling-themes)
+- [Bootstrap 5 Forms Video](https://www.youtube.com/watch?v=dKVX22GR7zQ)
 
 ## How to use Git
 
