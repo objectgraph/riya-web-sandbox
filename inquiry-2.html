@@ -17,11 +17,11 @@
       <div class="container-lg my-10">
         <div class="text-center">
           <h2>A Better Inquiry Form!</h2>
-          <p class="lead">A updated inquiry form with bootstrap</p>
+          <p class="lead">An updated inquiry form with bootstrap</p>
         </div>
         <div class="row justify-content-center my-5">
           <div class="col-lg-6">
-            <form>
+            <form class="needs-validation" novalidate>
               <label for="name" class="form-label">Name</label>
               <div class="mb-4 input-group">
                   <span class="input-group-text">
@@ -32,7 +32,11 @@
                 class="form-control"
                 id="name"
                 placeholder="John Doe"
+                required
               />
+              <div class="valid-feedback">
+                Looks good!
+              </div>
               </div>
               
               <label for="email" class="form-label">Email</label>
@@ -45,7 +49,11 @@
                   class="form-control"
                   id="email"
                   placeholder="johndoe@email.com"
+                  required
                 />
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
               </div>
              
 
@@ -56,10 +64,16 @@
                   </span>
                   <input
                 type="tel"
+                pattern="\d{3}[\-]\d{3}[\-]\d{4}" 
                 class="form-control"
                 id="phone"
                 placeholder="123-456-7890"
+                required
               />
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+          
               </div>
               
 
@@ -72,7 +86,12 @@
                 type="date"
                 class="form-control"
                 id="dob"
+                required
               />
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+          
               </div>
               
 
@@ -102,5 +121,27 @@
         </div>
       </div>
     </section>
+    <script>
+        //Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+    </script>
   </body>
 </html>
