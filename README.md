@@ -18,7 +18,7 @@
 - Created a dark mode using localStorage so the preference is kept when refreshed or when the page is changed
 - Created a new inquiry form with Bootstrap 5
   - Added validation
--
+-Tried to publish website
 
 ## What I've Used
 
